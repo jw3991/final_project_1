@@ -38,4 +38,3 @@ class Squirrel(models.Model):
     Approaches=models.BooleanField(blank=True,)
     Indifferent=models.BooleanField(blank=True,)
     Runs_From=models.BooleanField(blank=True,)
-

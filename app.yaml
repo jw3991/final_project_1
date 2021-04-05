@@ -1,0 +1,6 @@
+ndlers:
+- url: /static
+  static_dir: collected-static/
+
+- url: /.*
+  script: auto

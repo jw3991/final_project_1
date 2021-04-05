@@ -1,13 +1,13 @@
-import csv
-from django.core.management import BaseCommand
-# from dateutil import parser
-from sightings.models import Squirrel
-from datetime import date
 import re
+import csv
+from sightings.models import Squirrel
+from django.core.management import BaseCommand
+from datetime import date
+# from dateutil import parser
 
 
 class Command(BaseCommand):
-    help = 'Import the squirrel data'
+    help = 'Import squirrel data from csv file'
 
     def add_arguments(self, parser):
         parser.add_argument('path', type=str)
@@ -18,11 +18,11 @@ class Command(BaseCommand):
         pattern = re.compile(r'(\d{2})(\d{2})(\d{4})')
 
         with open(path, 'rt') as fp:
-            reader = csv.reader(fp, dialect='excel')
-            next(reader)
-            unique_id = list()
+            data0 = csv.reader(fp, dialect='excel')
+            next(data0)
+            Unique_ID = list()
             for row in reader:
-                if row[2] in unique_id:
+                if row[2] in Unique_ID:
                     continue
                 else:
                     month, day, year = pattern.match(row[5]).groups()
@@ -51,4 +51,4 @@ class Command(BaseCommand):
                         Indifferent=True if row[27] == 'TRUE' else False,
                         Runs_From=True if row[28] == 'TRUE' else False
                     )
-                    unique_id.append(row[2])
+                    Unique_ID.append(row[2])

@@ -4,7 +4,7 @@ from django.apps import apps
 import csv
 
 class Command(BaseCommand):
-    help = 'exports all information to csv files'
+    help = 'export squirrel data to csv files'
 
     def add_arguments(self, parser):
         parser.add_argument('path', type=str)
