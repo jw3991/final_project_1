@@ -39,4 +39,4 @@ Contributors: Jiaxin Wu, Weishan Lu
 
 UNIs: [**[jw3991]**](https://github.com/jw3991), [**[ws??]**](https://github.com/????)
 
-Click More [**Link**](https://github.com/jw3991/final_project_1/) for information on our Squirrel Tracker application page.
+Click [**Link**](https://github.com/jw3991/final_project_1/) for more information on our Squirrel Tracker Web-Application.
