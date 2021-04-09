@@ -28,24 +28,24 @@ Method Supported: GET
 Use the [leaflet](https://leafletjs.com/) library for plotting
 
 ### Squirrel List
-[Squirrel List](https://??????/sightings/): A view that lists all squirrel sightings with links to view each sighting. 
->Located at: /sightings
+[Squirrel List](https://??????/sightings/): A view that lists all squirrel sightings with links to view each sighting.
+>Located at: /sightings   
 Method Supported: GET   
 
 ### Squirrel Update
 [Squirrel Update](https://??????/sightings/): A view to update a particular sighting.
->Located at: /sightings/<unique-squirrel-id>
-Methods Supported: GET & POST
+>Located at: /sightings/<unique-squirrel-id>   
+Method Supported: GET & POST
 
 ### Squirrel Add
-[Squirrel Add](https://??????/sightings/add): A view to create a new sighting
->Located at:/sightings/add
-Methods Supported: GET & POST
+[Squirrel Add](https://??????/sightings/add): A view to create a new sighting.
+>Located at: /sightings/add   
+Method Supported: GET & POST
 
 ### Squirrel Stats
-[Squirrel Add](https://??????/sightings/stats): A view with general stats about the sightings
->Located at: /sightings/stats
-Method: GET
+[Squirrel Add](https://??????/sightings/stats): A view with general stats about the sightings.
+>Located at: /sightings/stats   
+Method Supported: GET
 
 
 ## Dependencies
