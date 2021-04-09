@@ -38,12 +38,12 @@ Method Supported: GET
 Method Supported: GET & POST
 
 ### Squirrel Add
-[Squirrel Add](https://??????/sightings/add): A view to create a new sighting.
+[Squirrel Add](https://??????/sightings/add/): A view to create a new sighting.
 >Located at: /sightings/add   
 Method Supported: GET & POST
 
 ### Squirrel Stats
-[Squirrel Add](https://??????/sightings/stats): A view with general stats about the sightings.
+[Squirrel Add](https://??????/sightings/stats/): A view with general stats about the sightings.
 >Located at: /sightings/stats   
 Method Supported: GET
 
