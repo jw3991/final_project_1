@@ -45,14 +45,14 @@ def stats(request):
     total_squirrels = Squirrel.objects.all().count()
     adult = Squirrel.objects.filter(Age='Adult').count()
     juvenile = Squirrel.objects.filter(Age='Juvenile').count()
+    am_shift = Squirrel.objects.filter(Shift='AM').count()
     above_ground = Squirrel.objects.filter(Location='Above Ground').count()
-    eating = Squirrel.objects.filter(Eating='TRUE').count()
     context = {
             'total_squirrels': total_squirrels,
-            'adult': age,
+            'adult': adult,
             'juvenile': juvenile,
             'above_ground': above_ground,
-            'eating': eating
+            'am_shift': am_shift,
             }
     return render(request, 'sightings/stats.html', context)
 
