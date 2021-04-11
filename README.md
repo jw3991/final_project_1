@@ -47,6 +47,8 @@ Method Supported: GET & POST
 Method Supported: GET
 
 ## Dependencies
+- [Django](https://www.djangoproject.com)
+- [Leaflet](https://leafletjs.com/)  
 
 ## Contributors
 
