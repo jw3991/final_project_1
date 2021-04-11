@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.shortcuts import get_object_or_404 ,redirect
 from .models import Squirrel
 from .forms import SquirrelForm
+from .forms import AddForm
 # from django.urls import reverse_lazy
 # from django.views.generic.edit import CreateView, DeleteView
 # from django.db.models import Avg, Max, Min, Count
@@ -26,3 +27,33 @@ def update(request, Squirrel_ID):
         form = SquirrelForm(instance=squirrel)
     context = {'form': form}
     return render(request, 'sightings/update.html', context)
+
+
+def add(request):
+    if request.method == 'POST':
+        form = AddForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("/sightings/")
+    else:
+        form = AddForm()
+    context = {'form': form}
+    return render(request, 'sightings/add.html', context)
+
+
+def stats(request):
+    total_squirrels = Squirrel.objects.all().count()
+    adult = Squirrel.objects.filter(Age='Adult').count()
+    juvenile = Squirrel.objects.filter(Age='Juvenile').count()
+    above_ground = Squirrel.objects.filter(Location='Above Ground').count()
+    eating = Squirrel.objects.filter(Eating='TRUE').count()
+    context = {
+            'total_squirrels': total_squirrels,
+            'adult': age,
+            'juvenile': juvenile,
+            'above_ground': above_ground,
+            'eating': eating
+            }
+    return render(request, 'sightings/stats.html', context)
+
+

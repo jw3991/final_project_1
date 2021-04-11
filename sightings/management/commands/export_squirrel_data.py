@@ -11,8 +11,8 @@ class Command(BaseCommand):
 
     def handle(self, *args, **kwargs):
         with open(kwargs['path'], 'w', newline='') as csvfile:
-            attributes = ['Latitude',
-            			'Longitude',
+            attributes = ['Longitude',
+            			'Latitude',
             			'Unique_Squirrel_ID',
             			'Shift',
             			'Date',
