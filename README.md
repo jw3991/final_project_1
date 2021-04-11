@@ -56,6 +56,6 @@ Section: 2
 
 Contributors: Jiaxin Wu, Weishan Lu
 
-UNIs: [**[jw3991]**](https://github.com/jw3991), [**[ws??]**](https://github.com/????)
+UNIs: [**[jw3991]**](https://github.com/jw3991), [**[wl2778]**](https://github.com/Weishan-Lu)
 
 Click [**Link**](https://<your project id>.appspot.com/) to the server running this application.
