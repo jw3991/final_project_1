@@ -5,9 +5,7 @@ from django.shortcuts import get_object_or_404 ,redirect
 from .models import Squirrel
 from .forms import SquirrelForm
 from .forms import AddForm
-# from django.urls import reverse_lazy
-# from django.views.generic.edit import CreateView, DeleteView
-# from django.db.models import Avg, Max, Min, Count
+
 
 
 def squirrels_list(request):
