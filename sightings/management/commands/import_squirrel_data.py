@@ -27,8 +27,8 @@ class Command(BaseCommand):
                 else:
                     month, day, year = pattern.match(row[5]).groups()
                     squirrel = Squirrel.objects.get_or_create(
-                        Latitude=float(row[0]),
-                        Longitude=float(row[1]),
+                        Longitude=float(row[0]),
+                        Latitude=float(row[1]),
                         Unique_Squirrel_ID=row[2],
                         Shift=row[4],
                         Date=date(int(year), int(month), int(day)),
