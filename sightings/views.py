@@ -5,6 +5,7 @@ from django.shortcuts import get_object_or_404 ,redirect
 from .models import Squirrel
 from .forms import SquirrelForm
 from .forms import AddForm
+from django.urls import reverse
 
 
 
