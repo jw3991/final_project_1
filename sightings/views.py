@@ -15,6 +15,12 @@ def squirrels_list(request):
     return render(request, 'sightings/squirrel_list.html', context)
 
 
+def delete(request, Squirrel_ID):
+    del_sighting = Squirrel.objects.filter(Unique_Squirrel_ID=Squirrel_ID)
+    del_sighting.delete()
+    return redirect(reverse('sightings:squirrels_list'))
+
+
 def update(request, Squirrel_ID):
     squirrel = get_object_or_404(Squirrel, Unique_Squirrel_ID=Squirrel_ID)
     if request.method == 'POST':
