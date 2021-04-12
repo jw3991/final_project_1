@@ -5,15 +5,20 @@ from django.shortcuts import get_object_or_404 ,redirect
 from .models import Squirrel
 from .forms import SquirrelForm
 from .forms import AddForm
-# from django.urls import reverse_lazy
-# from django.views.generic.edit import CreateView, DeleteView
-# from django.db.models import Avg, Max, Min, Count
+from django.urls import reverse
+
 
 
 def squirrels_list(request):
     squirrels = Squirrel.objects.all()
     context = {'squirrels': squirrels}
     return render(request, 'sightings/squirrel_list.html', context)
+
+
+def delete(request, Squirrel_ID):
+    del_sighting = Squirrel.objects.filter(Unique_Squirrel_ID=Squirrel_ID)
+    del_sighting.delete()
+    return redirect(reverse('sightings:squirrels_list'))
 
 
 def update(request, Squirrel_ID):

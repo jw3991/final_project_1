@@ -16,6 +16,7 @@
               <th align="center">Unique_Squirrel_ID</th>
               <th align="center">Date</th>
               <th align="center">Update</th>
+              <th align="delete">Delete</th>
             </tr>
           </thead>
           <tbody>
@@ -25,6 +26,8 @@
               <td align="center"> {{row.Date}}</td>
               <td align="center">
                 <a href="/sightings/{{row.Unique_Squirrel_ID}}/">update</a></td>
+              <td align="center">
+                <a href="/sightings/{{row.Unique_Squirrel_ID}}/delete/">delete</a></td>
            </tr>
           {% endfor %}
           </tbody>
