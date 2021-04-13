@@ -21,14 +21,14 @@ class Command(BaseCommand):
             data0 = csv.reader(fp, dialect='excel')
             next(data0)
             Unique_ID = list()
-            for row in reader:
+            for row in data0:
                 if row[2] in Unique_ID:
                     continue
                 else:
                     month, day, year = pattern.match(row[5]).groups()
                     squirrel = Squirrel.objects.get_or_create(
-                        Latitude=float(row[0]),
-                        Longitude=float(row[1]),
+                        Longitude=float(row[0]),
+                        Latitude=float(row[1]),
                         Unique_Squirrel_ID=row[2],
                         Shift=row[4],
                         Date=date(int(year), int(month), int(day)),

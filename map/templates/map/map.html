@@ -53,8 +53,8 @@
 
 
         {% for squirrel in squirrels %}
-            var point_lat_lon = [{{ squirrel.Longitude }}, {{ squirrel.Latitude }} ];
-            var maker_text = "Longitude: {{squirrel.Longitude}} <br>Latitude: {{squirrel.Latitude}} <br>Unique squirrel ID: {{squirrel.Unique_Squirrel_ID}}<br><a href='/sightings/{{squirrel.Unique_Squirrel_Id}}'>Link to Squirrel</a>"
+            var point_lat_lon = [{{ squirrel.Latitude}}, {{ squirrel.Longitude }} ];
+            var maker_text = "Latitude: {{squirrel.Latitude}} <br>Longitude: {{squirrel.Longitude}} <br>Unique squirrel ID: {{squirrel.Unique_Squirrel_ID}}<br><a href='/sightings/{{squirrel.Unique_Squirrel_Id}}'>Link to Squirrel</a>"
             var marker = L.marker(point_lat_lon).addTo(map).bindPopup(maker_text);
 
         {% endfor %}
