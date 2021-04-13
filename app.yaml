@@ -1,4 +1,4 @@
-ndlers:
+handlers:
 - url: /static
   static_dir: collected-static/
 
