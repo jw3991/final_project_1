@@ -6,8 +6,8 @@ from django.utils.translation import gettext as _
 # Create your models here.
 
 class Squirrel(models.Model):
-    Longitude= models.FloatField(blank=False,)
     Latitude = models.FloatField(blank=False,)
+    Longitude= models.FloatField(blank=False,)
     Unique_Squirrel_ID = models.CharField(max_length=100,unique=True, blank=False,)
 
     AM = 'AM'
