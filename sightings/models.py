@@ -5,19 +5,17 @@ from django.db import models
 from django.utils.translation import gettext as _
 # Create your models here.
 
-class Squirrel(models.Model):
-    Longitude= models.FloatField(blank=False,)
-    Latitude = models.FloatField(blank=False,)
-    Unique_Squirrel_ID = models.CharField(max_length=100,unique=True, blank=False,)
 
+class Squirrel(models.Model):
+    Latitude = models.FloatField(blank=False,)
+    Longitude= models.FloatField(blank=False,)
+    Unique_Squirrel_ID = models.CharField(max_length=100,unique=True, blank=False,)
     AM = 'AM'
     PM = 'PM'
-
     Shift_Chioce = [
         	(AM,_('AM')),
 		    (PM,_('PM')),
 	        ]
-
     Shift=models.CharField(max_length=100, choices=Shift_Chioce, blank=True,)
     Date=models.CharField(max_length=100,blank=True,)
     Age=models.CharField(max_length=100, blank=True,)
