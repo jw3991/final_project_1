@@ -45,13 +45,13 @@ def add(request):
 
 
 def stats(request):
-    total_squirrels = Squirrel.objects.all().count()
+    gray_squirrels = Squirrel.objects.filter(Primary_Fur_Color='Gray').count()
     adult = Squirrel.objects.filter(Age='Adult').count()
     juvenile = Squirrel.objects.filter(Age='Juvenile').count()
     am_shift = Squirrel.objects.filter(Shift='AM').count()
     above_ground = Squirrel.objects.filter(Location='Above Ground').count()
     context = {
-            'total_squirrels': total_squirrels,
+            'gray_squirrels': gray_squirrels,
             'adult': adult,
             'juvenile': juvenile,
             'above_ground': above_ground,
