@@ -28,17 +28,17 @@ Use the [leaflet](https://leafletjs.com/) library for plotting
 
 ### Squirrel List
 [Squirrel List](https://??????/sightings/): A view that lists all squirrel sightings with links to view each sighting.
->Located at: /sightings, click [**Read-only Link**](https://my-project-ieore4501.df.r.appspot.com/sightings/)
+>Located at: /sightings, click [**Read-only Link**](https://my-project-ieore4501.df.r.appspot.com/sightings/)   
 Method Supported: GET   
 
 ### Squirrel Update
 [Squirrel Update](https://??????/sightings/): A view to update a particular sighting.
->Located at: /sightings/<unique-squirrel-id>, click [**Read-only Link**](https://my-project-ieore4501.df.r.appspot.com/sightings/37F-PM-1014-03/)
+>Located at: /sightings/<unique-squirrel-id>, click [**Read-only Link**](https://my-project-ieore4501.df.r.appspot.com/sightings/37F-PM-1014-03/)   
 Method Supported: GET & POST
 
 ### Squirrel Add
 [Squirrel Add](https://??????/sightings/add/): A view to create a new sighting.
->Located at: /sightings/add, click [**Read-only Link**](https://my-project-ieore4501.df.r.appspot.com/sightings/add/)
+>Located at: /sightings/add, click [**Read-only Link**](https://my-project-ieore4501.df.r.appspot.com/sightings/add/)   
 Method Supported: GET & POST
 
 ### Squirrel Stats
