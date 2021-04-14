@@ -37,4 +37,4 @@ class Command(BaseCommand):
             writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
             writer.writerow(attributes)
             for row in Squirrel.objects.all():
-                writer.writerow([getattr(row, attribute) for attribute in attrib
+                writer.writerow([getattr(row, attribute) for attribute in attributes])
