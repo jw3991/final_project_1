@@ -42,7 +42,7 @@ Method Supported: GET & POST
 Method Supported: GET & POST
 
 ### Squirrel Stats
-[Squirrel Add](https://my-project-ieore4501.df.r.appspot.com/sightings/stats): A view with general stats about the sightings.
+[Squirrel Stats](https://my-project-ieore4501.df.r.appspot.com/sightings/stats): A view with general stats about the sightings.
 >Located at: /sightings/stats, click [**Read-only Link**](https://my-project-ieore4501.df.r.appspot.com/sightings/stats)   
 Method Supported: GET
 
