@@ -1,0 +1,12 @@
+{% extends 'sightings/base.html' %}
+
+{% load static %}
+
+{% block title %}The details of a Sighting{% endblock %}
+
+{% block main %}
+    <form method="post">{% csrf_token %}
+        <table align="center">{{ form }}</table>
+    </form>
+
+{% endblock %}

@@ -4,6 +4,7 @@ from django.shortcuts import get_object_or_404
 from .models import Squirrel
 from .forms import SquirrelForm
 from .forms import AddForm
+from .forms import DetailsForm
 from django.urls import reverse
 
 
@@ -11,6 +12,19 @@ def squirrels_list(request):
     squirrels = Squirrel.objects.all()
     context = {'squirrels': squirrels}
     return render(request, 'sightings/squirrel_list.html', context)
+
+
+def details(request,Squirrel_ID):
+    squirrel = get_object_or_404(Squirrel, Unique_Squirrel_ID=Squirrel_ID)
+    if request.method == 'POST':
+        form = DetailsForm(request.POST, instance=squirrel)
+        if form.is_valid():
+            form.save()
+            return redirect("/sightings/")
+    else:
+        form = DetailsForm(instance=squirrel)
+    context = {'form': form}
+    return render(request, 'sightings/details.html', context)
 
 
 def delete(request, Squirrel_ID):

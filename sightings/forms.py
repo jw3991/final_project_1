@@ -18,3 +18,10 @@ class AddForm(ModelForm):
     class Meta:
         model = Squirrel
         fields = '__all__'
+
+class DetailsForm(ModelForm):
+    class Meta:
+        model = Squirrel
+        fields = '__all__'
+
+

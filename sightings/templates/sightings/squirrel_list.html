@@ -22,7 +22,8 @@
           <tbody>
           {% for row in squirrels %}
            <tr>
-              <td align="center">{{row.Unique_Squirrel_ID}}</a></td>
+              <td align="center">
+                <a href="/sightings/{{row.Unique_Squirrel_ID}}/details">{{row.Unique_Squirrel_ID}}</a></td>
               <td align="center"> {{row.Date}}</td>
               <td align="center">
                 <a href="/sightings/{{row.Unique_Squirrel_ID}}/">update</a></td>
