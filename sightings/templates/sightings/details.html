@@ -5,6 +5,7 @@
 {% block title %}The details of a Sighting{% endblock %}
 
 {% block main %}
+    <h1 align="center">Details of a Sighting</h1>
     <form method="post">{% csrf_token %}
         <table align="center">{{ form }}</table>
     </form>
